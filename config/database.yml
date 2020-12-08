@@ -82,4 +82,4 @@ production:
   <<: *default
   database: fasi_backend_production
   username: fasi_backend
-  password: <%= ENV['Ke!!y_100197'] %>
+  password: <%= ENV['FASI_BACKEND_DATABASE_PASSWORD'] %>

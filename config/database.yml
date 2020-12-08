@@ -70,16 +70,16 @@ test:
 #
 # On Heroku and other platform providers, you may have a full connection URL
 # available as an environment variable. For example:
-#
-#   DATABASE_URL="postgres://myuser:mypass@localhost/somedatabase"
-#
+
+  DATABASE_URL="postgres://Kelly:kE!!y_100197@localhost/fasi_backend_development"
+
 # You can use this database configuration with:
+
+  production:
+    url: <%= ENV['DATABASE_URL'] %>
 #
-#   production:
-#     url: <%= ENV['DATABASE_URL'] %>
-#
-production:
-  <<: *default
-  database: fasi_backend_production
-  username: fasi_backend
-  password: <%= ENV['FASI_BACKEND_DATABASE_PASSWORD'] %>
+# production:
+#   <<: *default
+#   database: fasi_backend_production
+#   username: fasi_backend
+#   password: <%= ENV['FASI_BACKEND_DATABASE_PASSWORD'] %>
